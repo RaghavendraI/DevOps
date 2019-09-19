@@ -17,6 +17,16 @@
       name: default-jdk
       state: present
 
+   - name: Install chromium browser
+     package:
+       name: chromium-browser
+       state: present   
+
+    - name: Install chromium driver
+      package:
+       name: chromium-chromedriver
+       state: present      
+
   - name: Install packages that allow apt to be used over HTTPS
     apt:
       name: "{{ packages }}"
