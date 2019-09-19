@@ -17,6 +17,11 @@
       name: default-jdk
       state: present
 
+  - name: Copy chromedriver
+    copy:
+      src: /home/edureka/chromedriver
+      dest: /home/edureka/   
+
    - name: Install chromium browser
      package:
        name: chromium-browser
